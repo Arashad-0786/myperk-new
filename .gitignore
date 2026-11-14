@@ -1,0 +1,84 @@
+# Dependencies
+node_modules/
+**/.git/
+
+# Build outputs
+dist/
+build/
+.out/
+.vite/
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Debug and log files
+*.log
+debug.log
+error.log
+debug/
+logs/
+
+# Backup and temporary files
+*.bak
+*.backup
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# PHP files
+*.cache
+php://stderr
+composer.lock
+
+# MySQL installer and large binaries
+mysql-*.zip
+mysql-*/
+
+# Playwright reports
+playwright-report/
+test-results/
+ playwright/
+
+# Coverage reports
+.nyc_output/
+
+# NPM
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Test artifacts
+*.test-results.json
+TEST-*.xml
+
+# Misc
+.sass-cache/
+jest.config.lcov
+*.sehprof

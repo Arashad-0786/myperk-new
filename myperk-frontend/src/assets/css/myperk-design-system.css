@@ -1,0 +1,1130 @@
+/* MyPerk Design System CSS Variables
+   ================================
+   Design tokens and base styles for the MyPerk SaaS application.
+   This file is preimported via Vite config for global availability.
+*/
+
+/* Color Palette - Primary */
+:root {
+  --mp-primary: #4F46E5;
+  --mp-primary-dark: #3B39D7;
+  --mp-primary-light: #818CF8;
+  --mp-primary-hover: #312ECF;
+
+  /* Success */
+  --mp-success: #10B981;
+  --mp-success-dark: #059669;
+  --mp-success-light: #34D399;
+  --mp-success-hover: #0F8A66;
+
+  /* Warning */
+  --mp-warning: #F59E0B;
+  --mp-warning-dark: #D97706;
+  --mp-warning-light: #FBBF24;
+  --mp-warning-hover: #EAB308;
+
+  /* Danger */
+  --mp-danger: #EF4444;
+  --mp-danger-dark: #DC2626;
+  --mp-danger-light: #F87171;
+  --mp-danger-hover: #EA5B5C;
+
+  /* Info */
+  --mp-info: #6366F1;
+  --mp-info-dark: #4F46E5;
+  --mp-info-light: #A5F3FC;
+  --mp-info-hover: #818CF8;
+
+  /* Neutral */
+  --mp-neutral-50: #FAFAFF;
+  --mp-neutral-100: #F5F5FF;
+  --mp-neutral-200: #E4E4F0;
+  --mp-neutral-300: #D1D1E0;
+  --mp-neutral-400: #A3A3C0;
+  --mp-neutral-500: #7373A0;
+  --mp-neutral-600: #52527B;
+  --mp-neutral-700: #454567;
+  --mp-neutral-800: #2E2E45;
+  --mp-neutral-900: #1E1E37;
+
+  /* Background */
+  --mp-bg-page: #F8FAFC;
+  --mp-bg-card: #FFFFFF;
+  --mp-bg-section: #F1F5F9;
+
+  /* Text Colors */
+  --mp-text-primary: #1E293B;
+  --mp-text-secondary: #64748B;
+  --mp-text-muted: #94A3B8;
+  --mp-text-inverse: #FFFFFF;
+
+  /* Borders & Dividers */
+  --mp-border: #CBD5ED;
+  --mp-border-light: #E2E8F0;
+  --mp-border-soft: #F1F5F9;
+
+  /* Shadows */
+  --mp-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --mp-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --mp-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --mp-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -4px rgba(0, 0, 0, 0.02);
+
+  /* Border Radius */
+  --mp-radius-sm: 4px;
+  --mp-radius-md: 8px;
+  --mp-radius-lg: 12px;
+  --mp-radius-full: 9999px;
+
+  /* Spacing Scale */
+  --mp-space-1: 4px;
+  --mp-space-2: 8px;
+  --mp-space-3: 12px;
+  --mp-space-4: 16px;
+  --mp-space-5: 20px;
+  --mp-space-6: 24px;
+  --mp-space-8: 32px;
+}
+
+/* Button Styles */
+.myperk-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: var(--mp-radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.myperk-btn-primary {
+  background-color: var(--mp-primary);
+  color: white;
+}
+
+.myperk-btn-primary:hover:not(:disabled) {
+  background-color: var(--mp-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--mp-shadow-md);
+}
+
+.myperk-btn-primary:active:not(:disabled) {
+  background-color: var(--mp-primary-dark);
+  transform: translateY(0);
+}
+
+.myperk-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.myperk-btn-outline {
+  background: transparent;
+  color: var(--mp-primary);
+  border: 1px solid var(--mp-primary);
+}
+
+.myperk-btn-outline:hover:not(:disabled) {
+  background-color: var(--mp-primary);
+  color: white;
+}
+
+.myperk-btn-success {
+  background-color: var(--mp-success);
+  color: white;
+}
+
+.myperk-btn-danger {
+  background-color: var(--mp-danger);
+  color: white;
+}
+
+.myperk-btn-small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.myperk-btn-block {
+  width: 100%;
+}
+
+/* Card Styles */
+.myperk-card {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-4);
+  box-shadow: var(--mp-shadow-sm);
+}
+
+.myperk-card-loyalty {
+  border-left: 3px solid var(--mp-primary);
+}
+
+/* Layout Containers */
+.myperk-shell {
+  min-height: 100vh;
+  background: var(--mp-bg-page);
+}
+
+.myperk-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--mp-space-6);
+  width: 100%;
+}
+
+.myperk-nav {
+  display: flex;
+  gap: var(--mp-space-4);
+  padding: var(--mp-space-4) var(--mp-space-6);
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  margin-bottom: var(--mp-space-6);
+  box-shadow: var(--mp-shadow-sm);
+}
+
+.myperk-nav-link {
+  color: var(--mp-text-primary);
+  text-decoration: none;
+  padding: var(--mp-space-2) var(--mp-space-3);
+  border-radius: var(--mp-radius-md);
+  transition: color 0.2s;
+}
+
+.myperk-nav-link:hover {
+  color: var(--mp-primary);
+  background: rgba(79, 70, 229, 0.1);
+}
+
+/* Dashboard Header */
+.myperk-dashboard-header {
+  margin-bottom: var(--mp-space-6);
+  padding-bottom: var(--mp-space-3);
+  border-bottom: 1px solid var(--mp-border);
+}
+
+.myperk-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--mp-text-primary);
+  margin-bottom: var(--mp-space-1);
+}
+
+.myperk-subtitle {
+  color: var(--mp-text-secondary);
+  margin-bottom: var(--mp-space-4);
+}
+
+.myperk-welcome-page .myperk-subtitle {
+  font-size: 16px;
+}
+
+/* Forms */
+.myperk-form-section {
+  margin-bottom: var(--mp-space-6);
+}
+
+.myperk-form-section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--mp-text-primary);
+  margin-bottom: var(--mp-space-4);
+  padding-bottom: var(--mp-space-2);
+  border-bottom: 1px solid var(--mp-border);
+}
+
+.myperk-form-group {
+  margin-bottom: var(--mp-space-3);
+}
+
+.myperk-form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--mp-text-primary);
+  margin-bottom: var(--mp-space-1);
+}
+
+.myperk-input {
+  width: 100%;
+  padding: var(--mp-space-2) var(--mp-space-3);
+  border: 1px solid var(--mp-border);
+  border-radius: var(--mp-radius-md);
+  font-size: 14px;
+  color: var(--mp-text-primary);
+  background: var(--mp-bg-card);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.myperk-input:focus {
+  outline: none;
+  border-color: var(--mp-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.myperk-textarea {
+  width: 100%;
+  padding: var(--mp-space-2) var(--mp-space-3);
+  border: 1px solid var(--mp-border);
+  border-radius: var(--mp-radius-md);
+  font-size: 14px;
+  color: var(--mp-text-primary);
+  background: var(--mp-bg-card);
+  min-height: 80px;
+  resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.myperk-textarea:focus {
+  outline: none;
+  border-color: var(--mp-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.myperk-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-right: 12px center;
+  padding-right: 30px;
+}
+
+.myperk-select:focus {
+  outline: none;
+  border-color: var(--mp-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.myperk-color-input {
+  width: 50px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--mp-border);
+  border-radius: var(--mp-radius-md);
+  cursor: pointer;
+}
+
+.myperk-color-preview {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--mp-radius-sm);
+}
+
+/* Alerts */
+.myperk-alert {
+  padding: var(--mp-space-3) var(--mp-space-4);
+  border-radius: var(--mp-radius-md);
+  margin-bottom: var(--mp-space-4);
+  font-size: 14px;
+}
+
+.myperk-alert-error {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--mp-danger);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.myperk-alert-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--mp-success);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.myperk-alert-info {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--mp-info);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+/* Empty State */
+.myperk-empty-state {
+  text-align: center;
+  padding: var(--mp-space-8) var(--mp-space-4);
+  color: var(--mp-text-muted);
+}
+
+/* Pagination */
+.myperk-pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--mp-space-2);
+  margin-top: var(--mp-space-4);
+  padding-top: var(--mp-space-3);
+  border-top: 1px solid var(--mp-border);
+}
+
+.myperk-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.myperk-badge-success {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--mp-success);
+}
+
+.myperk-badge-warning {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--mp-warning);
+}
+
+/* Table Styles */
+.myperk-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--mp-space-3);
+}
+
+.myperk-table th,
+.myperk-table td {
+  padding: var(--mp-space-3) var(--mp-space-4);
+  border-bottom: 1px solid var(--mp-border);
+  text-align: left;
+}
+
+.myperk-table th {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--mp-text-secondary);
+  text-transform: uppercase;
+}
+
+.myperk-table tr {
+  transition: background 0.2s;
+}
+
+.myperk-table tr:hover {
+  background: rgba(79, 70, 229, 0.03);
+}
+
+.myperk-table-row {
+  transition: background 0.2s;
+}
+
+.myperk-table-row:last-child {
+  border-bottom: none;
+}
+
+/* Progress/Stamp Bar */
+.myperk-stamp-progress {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: var(--mp-space-2) 0;
+  background: var(--mp-border-light);
+}
+
+.myperk-stamp-filled {
+  height: 100%;
+  background: var(--mp-primary);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.myperk-stamp-empty {
+  height: 100%;
+  background: var(--mp-border-light);
+  flex: 1;
+}
+
+/* Activity Item */
+.myperk-activity-list {
+  display: flex;
+  gap: var(--mp-space-3);
+  margin-top: var(--mp-space-3);
+}
+
+.myperk-activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--mp-space-2);
+  padding: var(--mp-space-2) 0;
+  border-bottom: 1px solid var(--mp-border-light);
+}
+
+.myperk-activity-item:last-child {
+  border-bottom: none;
+}
+
+.myperk-activity-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.myperk-activity-details {
+  flex: 1;
+}
+
+.myperk-activity-customer {
+  font-weight: 500;
+  color: var(--mp-text-primary);
+  font-size: 14px;
+}
+
+.myperk-activity-action {
+  color: var(--mp-text-secondary);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.myperk-activity-time {
+  color: var(--mp-text-muted);
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+/* Sections */
+.myperk-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--mp-space-4);
+  margin: var(--mp-space-3) 0;
+}
+
+.myperk-metric-card {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-4);
+  box-shadow: var(--mp-shadow-sm);
+}
+
+.myperk-metric-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--mp-primary);
+}
+
+.myperk-metric-label {
+  color: var(--mp-text-secondary);
+  font-size: 13px;
+  margin-top: var(--mp-space-1);
+}
+
+/* Subscription */
+.myperk-subscription {
+  margin-top: var(--mp-space-4);
+}
+
+.myperk-subscription-details {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-4);
+}
+
+.myperk-subscription-plan {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--mp-text-primary);
+  margin-bottom: var(--mp-space-1);
+}
+
+.myperk-subscription-status {
+  color: var(--mp-text-secondary);
+  font-size: 14px;
+}
+
+/* Alert Modal (for QR code) */
+.myperk-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.myperk-modal-content {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-6) var(--mp-space-8);
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.myperk-modal h3 {
+  margin-top: 0;
+  margin-bottom: var(--mp-space-3);
+}
+
+.myperk-modal p {
+  color: var(--mp-text-secondary);
+  margin-bottom: var(--mp-space-4);
+}
+
+.myperk-qr-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mp-space-4);
+  background: var(--mp-bg-page);
+}
+
+.myperk-qr-card {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-6) var(--mp-space-8);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--mp-shadow-md);
+}
+
+.myperk-qr-display {
+  margin: var(--mp-space-3) 0;
+}
+
+.myperk-qr-box {
+  width: 180px;
+  height: 180px;
+  border: 2px dashed var(--mp-border);
+  border-radius: var(--mp-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--mp-space-3);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.myperk-qr-box:hover {
+  border-color: var(--mp-primary);
+}
+
+.myperk-qr-box-scanning {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { border-color: var(--mp-primary); }
+  50% { border-color: var(--mp-success); }
+}
+
+.myperk-qr-input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mp-space-2);
+  margin-top: var(--mp-space-3);
+}
+
+.myperk-qr-input {
+  padding: var(--mp-space-2) var(--mp-space-3);
+  width: 100%;
+  max-width: 280px;
+  border: 1px solid var(--mp-border);
+  border-radius: var(--mp-radius-md);
+  font-size: 14px;
+  text-align: center;
+}
+
+.myperk-qr-instruction {
+  color: var(--mp-text-muted);
+  font-size: 13px;
+  margin: var(--mp-space-2) 0;
+}
+
+/* Customer Dashboard Specific */
+.myperk-customer-dashboard {
+  padding: var(--mp-space-4) 0;
+}
+
+.myperk-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--mp-space-4);
+}
+
+.myperk-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--mp-space-3);
+  margin: var(--mp-space-3) 0;
+}
+
+.myperk-stat-card {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-3) var(--mp-space-4);
+  text-align: center;
+  box-shadow: var(--mp-shadow-sm);
+}
+
+.myperk-stat-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--mp-primary);
+}
+
+.myperk-stat-label {
+  color: var(--mp-text-secondary);
+  font-size: 12px;
+  margin-top: var(--mp-space-1);
+}
+
+.myperk-cards-section {
+  margin-top: var(--mp-space-4);
+}
+
+.myperk-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--mp-space-3);
+  margin-top: var(--mp-space-3);
+}
+
+.myperk-card {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-4);
+  box-shadow: var(--mp-shadow-sm);
+  transition: transform 0.2s;
+}
+
+.myperk-card:hover {
+  transform: translateY(-2px);
+}
+
+.myperk-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--mp-space-2);
+}
+
+.myperk-card-status {
+  padding: 2px 6px;
+  border-radius: var(--mp-radius-sm);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.myperk-card-status.active {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--mp-success);
+}
+
+.myperk-card-status.pending {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--mp-warning);
+}
+
+.myperk-card-status.revoked {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--mp-danger);
+}
+
+.myperk-card-body {
+  margin: var(--mp-space-2) 0;
+}
+
+.myperk-card-rewards {
+  color: var(--mp-text-secondary);
+  font-size: 13px;
+  margin-top: var(--mp-space-2);
+}
+
+.myperk-stamp-progress {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: var(--mp-space-2) 0;
+  background: var(--mp-border-light);
+}
+
+.myperk-stamp-filled {
+  height: 100%;
+  background: var(--mp-primary);
+  border-radius: 4px;
+  flex: 1;
+}
+
+.myperk-stamp-empty {
+  height: 100%;
+  background: var(--mp-border-light);
+  flex: 1;
+}
+
+/* Staff Dashboard Specific */
+.myperk-staff-dashboard {
+  padding: var(--mp-space-4) 0;
+}
+
+.myperk-requests-summary {
+  margin: var(--mp-space-3) 0;
+}
+
+.myperk-requests-list {
+  margin-top: var(--mp-space-3);
+}
+
+.myperk-request-card {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-3) var(--mp-space-4);
+  margin-bottom: var(--mp-space-2);
+  box-shadow: var(--mp-shadow-sm);
+}
+
+.myperk-request-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--mp-space-2);
+}
+
+.myperk-request-actions .myperk-btn-small:first-child {
+  margin-right: var(--mp-space-2);
+}
+
+/* Business Dashboard Specific */
+.myperk-business-dashboard {
+  padding: var(--mp-space-4) 0;
+}
+
+.myperk-dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--mp-space-4);
+  margin-top: var(--mp-space-4);
+}
+
+@media (max-width: 768px) {
+  .myperk-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.myperk-metrics {
+  margin-bottom: var(--mp-space-4);
+}
+
+.myperk-activity {
+  margin-top: var(--mp-space-4);
+}
+
+.myperk-activity-list {
+  margin-top: var(--mp-space-2);
+}
+
+.myperk-activity-item {
+  padding: var(--mp-space-2) 0;
+  border-bottom: 1px solid var(--mp-border-light);
+}
+
+.myperk-activity-item:last-child {
+  border-bottom: none;
+}
+
+.myperk-subscription {
+  margin-top: var(--mp-space-4);
+  padding-top: var(--mp-space-3);
+  border-top: 1px solid var(--mp-border);
+}
+
+.myperk-subscription-details {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-3);
+}
+
+/* Business Settings Specific */
+.myperk-business-settings {
+  padding: var(--mp-space-4) 0;
+}
+
+.myperk-settings-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.myperk-form-group {
+  margin-bottom: var(--mp-space-4);
+}
+
+.myperk-form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--mp-text-primary);
+  margin-bottom: var(--mp-space-1);
+}
+
+.myperk-branches-list {
+  margin-top: var(--mp-space-3);
+}
+
+.myperk-branch-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--mp-space-2) 0;
+  border-bottom: 1px solid var(--mp-border-light);
+}
+
+.myperk-branch-item:last-child {
+  border-bottom: none;
+}
+
+.myperk-btn-add-branch {
+  margin-top: var(--mp-space-3);
+  padding: var(--mp-space-2) var(--mp-space-3);
+}
+
+/* Admin Dashboard Specific */
+.myperk-admin-dashboard {
+  padding: var(--mp-space-4) 0;
+}
+
+.myperk-admin-grid {
+  margin-top: var(--mp-space-4);
+}
+
+.myperk-admin-metrics {
+  margin-bottom: var(--mp-space-4);
+}
+
+.myperk-admin-metric-card {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-4);
+  box-shadow: var(--mp-shadow-sm);
+  text-align: center;
+}
+
+.myperk-admin-metric-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--mp-primary);
+}
+
+.myperk-admin-metric-label {
+  color: var(--mp-text-secondary);
+  font-size: 13px;
+  margin-top: var(--mp-space-1);
+}
+
+.myperk-admin-metric-card:nth-child(2) .myperk-admin-metric-value {
+  color: var(--mp-success);
+}
+
+.myperk-admin-metric-card:nth-child(3) .myperk-admin-metric-value {
+  color: var(--mp-warning);
+}
+
+.myperk-admin-metric-card:nth-child(4) .myperk-admin-metric-value {
+  color: var(--mp-info);
+}
+
+/* Admin Business List */
+.myperk-admin-businesses {
+  padding: var(--mp-space-4) 0;
+}
+
+.myperk-admin-table {
+  overflow-x: auto;
+}
+
+.myperk-table-container {
+  margin-top: var(--mp-space-3);
+}
+
+.myperk-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.myperk-table th,
+.myperk-table td {
+  padding: var(--mp-space-3) var(--mp-space-4);
+  border-bottom: 1px solid var(--mp-border);
+  text-align: left;
+}
+
+.myperk-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--mp-bg-page);
+  z-index: 1;
+}
+
+.myperk-table thead th {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--mp-text-secondary);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--mp-border);
+}
+
+.myperk-table tbody tr {
+  transition: background 0.2s;
+}
+
+.myperk-table tbody tr:hover {
+  background: rgba(79, 70, 229, 0.03);
+}
+
+.myperk-pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--mp-space-2);
+  margin-top: var(--mp-space-4);
+  padding-top: var(--mp-space-3);
+  border-top: 1px solid var(--mp-border);
+}
+
+/* QR Scanner Page Specific */
+.myperk-qr-page {
+  min-height: 100vh;
+  background: var(--mp-bg-page);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mp-space-4);
+}
+
+.myperk-qr-card {
+  background: var(--mp-bg-card);
+  border-radius: var(--mp-radius-lg);
+  padding: var(--mp-space-6) var(--mp-space-8);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: var(--mp-shadow-lg);
+}
+
+.myperk-qr-box {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed var(--mp-border);
+  border-radius: var(--mp-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--mp-space-3);
+  cursor: pointer;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.myperk-qr-box:hover {
+  border-color: var(--mp-primary);
+}
+
+.myperk-qr-box-scanning::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--mp-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.myperk-qr-result {
+  margin: var(--mp-space-3) 0;
+  padding: var(--mp-space-3);
+  border-radius: var(--mp-radius-md);
+}
+
+.myperk-qr-result.valid {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--mp-success);
+}
+
+.myperk-qr-result.invalid {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--mp-danger);
+}
+
+.myperk-qr-result h3 {
+  margin-top: 0;
+  margin-bottom: var(--mp-space-1);
+}
+
+/* Login / Welcome Page */
+.myperk-welcome-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--mp-space-8) var(--mp-space-4);
+  text-align: center;
+  background: var(--mp-bg-page);
+}
+
+.myperk-auth-buttons {
+  display: flex;
+  gap: var(--mp-space-3);
+  margin: var(--mp-space-6) 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.myperk-btn-primary.myperk-btn-large {
+  padding: var(--mp-space-3) var(--mp-space-6);
+  font-size: 16px;
+}
+
+.myperk-btn-large {
+  padding: var(--mp-space-3) var(--mp-space-6);
+  font-size: 16px;
+}
+
+.myperk-desc {
+  color: var(--mp-text-secondary);
+  margin: var(--mp-space-4) 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Scan Result Badge styles (inline) */
+.rc-breadcrumb {
+  display: none;
+}
+
+/* Make sure inputs don't inherit weird styles */
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=color],
+textarea,
+select {
+  font: inherit;
+}

@@ -1,0 +1,1 @@
+curl -X POST "http://localhost:8080/myperk/v1/customer/stamp-request" -H "Content-Type: application/json" -H "X-MyPerk-API-Key: bk_myperk_business_1" -d "{\"business_id\": 1, \"branch_id\": 1, \"qr_hash\": \"TC001\", \"phone\": \"+15551234567\", \"requested_stamps\": 1}" -v > output.txt 2>&1
